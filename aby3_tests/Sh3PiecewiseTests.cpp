@@ -1,7 +1,7 @@
 #include "Sh3PiecewiseTests.h"
-#include <aby3/sh3/Sh3Piecewise.h>
-#include <aby3/sh3/Sh3Encryptor.h>
-#include <aby3/sh3/Sh3Evaluator.h>
+#include "aby3/sh3/Sh3Piecewise.h"
+#include "aby3/sh3/Sh3Encryptor.h"
+#include "aby3/sh3/Sh3Evaluator.h"
 #include <random>
 #include <cryptoTools/Network/IOService.h>
 
@@ -98,7 +98,7 @@ void createSharing(
 	//	s1.mShares[0].setZero();
 	//	s2.mShares[0].setZero();
 	//}
-	//else 
+	//else
 	{
 		prng.get(s1.mShares[0].data(), s1.mShares[0].size());
 		prng.get(s2.mShares[0].data(), s2.mShares[0].size());

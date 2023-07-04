@@ -1,7 +1,7 @@
 #include "Sh3EvaluatorTests.h"
 #include "aby3/sh3/Sh3Evaluator.h"
 #include "aby3/sh3/Sh3Encryptor.h"
-#include <cryptoTools/Network/Channel.h>
+#include "cryptoTools/Network/Channel.h"
 #include <cryptoTools/Network/IOService.h>
 #include <cryptoTools/Crypto/PRNG.h>
 #include <cryptoTools/Common/BitVector.h>
@@ -757,7 +757,7 @@ void createSharing(
     //	s1.mShares[0].setZero();
     //	s2.mShares[0].setZero();
     //}
-    //else 
+    //else
     {
         prng.get(s1.mShares[0].data(), s1.mShares[0].size());
         prng.get(s2.mShares[0].data(), s2.mShares[0].size());

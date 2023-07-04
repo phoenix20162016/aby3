@@ -5,7 +5,7 @@
 #include "Sh3BinaryEvaluator.h"
 #include <cryptoTools/Common/Matrix.h>
 #include <cryptoTools/Common/Log.h>
-#include <libOTe/Tools/Tools.h>
+#include "libOTe/Tools/Tools.h"
 #include <cryptoTools/Crypto/RandomOracle.h>
 #include "Sh3Converter.h"
 #include <immintrin.h>
@@ -716,13 +716,13 @@ namespace aby3
             for (u64 j = 0; j < 2; ++j)
             {
                 auto x = mMem.mShares[1][in[0]].data();
-                
+
                 if (eq32(x, &mCheckBlock))
                 {
                     mLog << j << " at lvl " << mLevel << " gate " << (mGateIter - mCir->mGates.begin())
                         << " " << gateToString(gate.mType) << " (" << gate.mInput[0] << "," << gate.mInput[1] << " ) -> " << gate.mOutput << std::endl;
-                    mLog << " =    " << hex({ x,1 }, 100) << std::endl;
-                    mLog << " cc = " << hex({ &mCheckBlock, 1 }) << std::endl;
+                    // TODO mLog << " =    " << hex({ x,1 }, 100) << std::endl;
+                    // TODO mLog << " cc = " << hex({ &mCheckBlock, 1 }) << std::endl;
 
 
                     oc::lout << mLog.str() << std::endl;
